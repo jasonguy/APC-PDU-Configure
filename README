@@ -1,7 +1,24 @@
-This class allows you to mass configure APC PDUs.  It requires a writeable 'configs/' directory where the class downloads
-configs to while they're being worked on.  After you write the config, it may not be updated on the remote system for a few
-minutes, as the PDU seems to randomly scan for changed configs and apply them at varying rates.  There's not much information
-available on how this works from APC.
+Author:
 
-Usage examples are included in example.php.  This probably isn't all as clean as it could be, so if you want to make any
-changes even if they're just code cleanup I'd welcome it.
+Raghu Udiyar <raghusiddarth@gmail.com>
+
+Description:
+
+
+This module is used to mass configure APC Power Distribution Units (PDU).
+
+The config file is downloaded (via ftp) and stored in 'configs/<ip>.ini' file. The 
+config can then be parsed, modified, stored and sent back to the respective PDU.
+    
+Take care that after the config file is written, it should not be updated on the remote 
+PDU system for a few minutes, as the PDU seems to randomly scan for changed configs 
+and apply them at varying rates. There is not much information available on how this 
+works from APC.
+
+Usage examples are included in example.py.  
+
+This is the python port (with a few changes) of the orignial php code written by 
+Kevin O'Connor <kjoconnor@gmail.com>
+
+For further documentation and updated code : https://github.com/raags/APC-PDU-Configure
+    
